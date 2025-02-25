@@ -1,4 +1,4 @@
-/* Tambahan styling custom untuk SentinelDropHub */
+/* Tambahan styling custom untuk SentinelDiscus */
 .bg-gray-50 {
     background-color: #f9fafb;
 }
@@ -46,4 +46,12 @@
 }
 .bg-gradient-to-r {
     background-image: linear-gradient(to right, #2d3748, #4299e1);
-    }
+}
+
+/* Tambah elemen bunga sakura minimalis sebagai background (opsional) */
+.bg-sakura {
+    background-image: url('images/sakura-bg.png'); /* Ganti dengan gambar bunga sakura kecil, upload ke folder images */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+}
