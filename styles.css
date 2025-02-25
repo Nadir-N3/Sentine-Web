@@ -1,12 +1,15 @@
 /* Tambahan styling custom untuk SentinelDropHub */
-.bg-gray-100 {
-    background-color: #f7fafc;
+.bg-gray-50 {
+    background-color: #f9fafb;
 }
 .text-gray-800 {
     color: #2d3748;
 }
 .bg-blue-600 {
     background-color: #2d3748;
+}
+.bg-blue-800 {
+    background-color: #1c2d41;
 }
 .bg-blue-500 {
     background-color: #4299e1;
@@ -23,6 +26,9 @@
 .text-blue-500 {
     color: #4299e1;
 }
+.text-yellow-400 {
+    color: #d69e2e;
+}
 .border-blue-400 {
     border-color: #63b3ed;
 }
@@ -38,3 +44,6 @@
 .font-sans {
     font-family: 'Arial', sans-serif;
 }
+.bg-gradient-to-r {
+    background-image: linear-gradient(to right, #2d3748, #4299e1);
+    }
