@@ -1,0 +1,13 @@
+/* Tambahan styling custom */
+.bg-gray-900 {
+    background-color: #1a1a1a;
+}
+.text-white {
+    color: #ffffff;
+}
+.hover:text-blue-400:hover {
+    transition: color 0.3s ease;
+}
+.shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
