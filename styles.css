@@ -1,12 +1,30 @@
-/* Tambahan styling custom */
-.bg-gray-900 {
-    background-color: #1a1a1a;
+/* Tambahan styling custom untuk CryptoDropHub */
+.bg-gray-100 {
+    background-color: #f7fafc;
 }
-.text-white {
-    color: #ffffff;
+.text-gray-800 {
+    color: #2d3748;
 }
-.hover:text-blue-400:hover {
-    transition: color 0.3s ease;
+.bg-blue-600 {
+    background-color: #2d3748;
+}
+.bg-blue-500 {
+    background-color: #4299e1;
+}
+.bg-yellow-500 {
+    background-color: #d69e2e;
+}
+.bg-yellow-600 {
+    background-color: #b7791f;
+}
+.text-blue-600 {
+    color: #2d3748;
+}
+.text-blue-500 {
+    color: #4299e1;
+}
+.border-blue-400 {
+    border-color: #63b3ed;
 }
 .shadow-md {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -19,7 +37,4 @@
 }
 .transition {
     transition: all 0.3s ease;
-}
-.border-gray-600 {
-    border-color: #4a5568;
 }
