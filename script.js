@@ -30,6 +30,9 @@ $(document).ready(function() {
             options: {
                 scales: {
                     y: { beginAtZero: false }
+                },
+                plugins: {
+                    legend: { display: false }
                 }
             }
         });
@@ -78,7 +81,7 @@ $(document).ready(function() {
         }
     });
 
-    // Search bar sederhana
+    // Search bar sederhana (opsional, tambahkan input di navbar kalau mau)
     $('#search-input').on('input', function() {
         const query = $(this).val().toLowerCase();
         $('.animate__fadeIn').each(function() {
