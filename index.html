@@ -10,14 +10,29 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
-    <header class="bg-gradient-to-r from-blue-600 to-blue-800 p-8 text-white text-center shadow-lg">
+    <header class="bg-gradient-to-r from-blue-600 to-blue-800 p-8 text-white text-center shadow-lg relative">
         <div class="flex items-center justify-center space-x-4 mb-6">
             <!-- Placeholder untuk logo, ganti dengan URL gambar logo yang sudah dicrop -->
             <img src="https://via.placeholder.com/50" alt="SentinelDiscus Logo" class="rounded-full animate__animated animate__bounceIn w-12 h-12">
             <h1 class="text-4xl font-bold animate__animated animate__fadeIn">SentinelDiscus</h1>
         </div>
         <p class="mt-2 text-xl animate__animated animate__fadeIn animate__delay-1s">Pusat Informasi Airdrop, Drophunting, dan Kripto untuk Komunitas SentinelDiscus</p>
+        <!-- Tombol Slider (Titik Tiga) -->
+        <button id="menu-toggle" class="absolute top-4 right-4 text-white text-3xl focus:outline-none">⋮</button>
     </header>
+
+    <!-- Sidebar Slider -->
+    <div id="sidebar" class="fixed top-0 right-0 w-64 bg-blue-500 text-white h-full shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+        <div class="p-6">
+            <h2 class="text-2xl font-bold mb-4">Menu SentinelDiscus</h2>
+            <ul class="space-y-4">
+                <li><a href="#dashboard" class="block hover:text-yellow-400 hover:underline transition">Dashboard Akun</a></li>
+                <li><a href="#notifications" class="block hover:text-yellow-400 hover:underline transition">Notifikasi Airdrop</a></li>
+                <li><a href="#settings" class="block hover:text-yellow-400 hover:underline transition">Pengaturan</a></li>
+                <li><a href="#logout" class="block hover:text-yellow-400 hover:underline transition">Keluar</a></li>
+            </ul>
+        </div>
+    </div>
 
     <nav class="bg-blue-500 p-4 text-center shadow-md">
         <div class="flex justify-center space-x-8">
@@ -45,19 +60,39 @@
             <h2 class="text-3xl font-bold mb-6 border-b-2 border-blue-400 pb-2">Peluang Airdrop Terbaru</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition animate__animated animate__fadeIn">
-                    <strong class="text-xl text-blue-600">SEED Project (Ethereum)</strong>
-                    <p class="mt-2 text-gray-600">Dapatkan token SEED gratis dengan ikut game berbasis Telegram. <a href="https://t.me/seedapp" class="text-blue-500 hover:text-blue-600 hover:underline">Selengkapnya</a></p>
-                    <p class="mt-2 text-sm text-gray-500">Berakhir: <span class="timer" data-end="2025-03-30T23:59:59">Loading...</span></p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition animate__animated animate__fadeIn animate__delay-2s">
-                    <strong class="text-xl text-blue-600">TapSwap (Solana)</strong>
-                    <p class="mt-2 text-gray-600">Kumpulkan token TAPS melalui aplikasi tap-to-earn. <a href="https://t.me/tapswap" class="text-blue-500 hover:text-blue-600 hover:underline">Coba sekarang</a></p>
+                    <strong class="text-xl text-blue-600">Gradient (Solana)</strong>
+                    <p class="mt-2 text-gray-600">Dapatkan poin dengan berbagi data AI melalui jaringan DePIN, berpeluang airdrop token. <a href="https://app.gradient.network" class="text-blue-500 hover:text-blue-600 hover:underline">Selengkapnya</a></p>
                     <p class="mt-2 text-sm text-gray-500">Berakhir: <span class="timer" data-end="2025-04-15T23:59:59">Loading...</span></p>
                 </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition animate__animated animate__fadeIn animate__delay-2s">
+                    <strong class="text-xl text-blue-600">BlockMesh (Solana)</strong>
+                    <p class="mt-2 text-gray-600">Monetisasi bandwidth tidak terpakai dengan ekstensi browser, dapatkan poin untuk airdrop. <a href="https://app.blockmesh.xyz" class="text-blue-500 hover:text-blue-600 hover:underline">Coba sekarang</a></p>
+                    <p class="mt-2 text-sm text-gray-500">Berakhir: <span class="timer" data-end="2025-05-01T23:59:59">Loading...</span></p>
+                </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition animate__animated animate__fadeIn animate__delay-4s">
-                    <strong class="text-xl text-blue-600">Yescoin (Base)</strong>
-                    <p class="mt-2 text-gray-600">Kumpulkan koin dengan geser layar di platform kami. <a href="https://t.me/yescoin" class="text-blue-500 hover:text-blue-600 hover:underline">Gabung sekarang</a></p>
-                    <p class="mt-2 text-sm text-gray-500">Berakhir: <span class="timer" data-end="2025-05-10T23:59:59">Loading...</span></p>
+                    <strong class="text-xl text-blue-600">Functor (Ethereum)</strong>
+                    <p class="mt-2 text-gray-600">Ikut program node untuk earn poin dan peluang airdrop token DePIN. <a href="https://node.securitylabs.xyz" class="text-blue-500 hover:text-blue-600 hover:underline">Lihat Detail</a></p>
+                    <p class="mt-2 text-sm text-gray-500">Berakhir: <span class="timer" data-end="2025-03-31T23:59:59">Loading...</span></p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition animate__animated animate__fadeIn animate__delay-6s">
+                    <strong class="text-xl text-blue-600">KITE AI (Polygon)</strong>
+                    <p class="mt-2 text-gray-600">Dapatkan rewards dengan ikut testnet dan tugas sosial untuk peluang airdrop. <a href="https://kite.ai" class="text-blue-500 hover:text-blue-600 hover:underline">Gabung sekarang</a></p>
+                    <p class="mt-2 text-sm text-gray-500">Berakhir: <span class="timer" data-end="2025-06-15T23:59:59">Loading...</span></p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition animate__animated animate__fadeIn animate__delay-8s">
+                    <strong class="text-xl text-blue-600">Bless (Solana)</strong>
+                    <p class="mt-2 text-gray-600">Berbagi sumber daya jaringan untuk poin airdrop melalui ekstensi browser. <a href="https://bless.network" class="text-blue-500 hover:text-blue-600 hover:underline">Selengkapnya</a></p>
+                    <p class="mt-2 text-sm text-gray-500">Berakhir: <span class="timer" data-end="2025-04-30T23:59:59">Loading...</span></p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition animate__animated animate__fadeIn animate__delay-10s">
+                    <strong class="text-xl text-blue-600">Teneo (Solana/Ethereum)</strong>
+                    <p class="mt-2 text-gray-600">Jalankan Teneo Community Node untuk earn Teneo Points dan peluang airdrop token TENEO. <a href="https://teneo.pro" class="text-blue-500 hover:text-blue-600 hover:underline">Coba sekarang</a></p>
+                    <p class="mt-2 text-sm text-gray-500">Berakhir: <span class="timer" data-end="2025-05-20T23:59:59">Loading...</span></p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition animate__animated animate__fadeIn animate__delay-12s">
+                    <strong class="text-xl text-blue-600">Fraction AI (Ethereum)</strong>
+                    <p class="mt-2 text-gray-600">Dapatkan poin dengan tugas bounty dan testnet untuk peluang airdrop token. <a href="https://fraction.ai" class="text-blue-500 hover:text-blue-600 hover:underline">Lihat Detail</a></p>
+                    <p class="mt-2 text-sm text-gray-500">Berakhir: <span class="timer" data-end="2025-06-10T23:59:59">Loading...</span></p>
                 </div>
             </div>
             <div class="mt-6 text-center">
@@ -65,9 +100,9 @@
                 <div id="filter-options" class="mt-4 hidden">
                     <select class="p-3 rounded-lg text-gray-800 border border-gray-300">
                         <option value="all">Semua Blockchain</option>
-                        <option value="ethereum">Ethereum</option>
                         <option value="solana">Solana</option>
-                        <option value="base">Base</option>
+                        <option value="ethereum">Ethereum</option>
+                        <option value="polygon">Polygon</option>
                     </select>
                 </div>
             </div>
@@ -77,13 +112,13 @@
             <h2 class="text-3xl font-bold mb-6 border-b-2 border-blue-400 pb-2">Peluang Drophunting Terkini</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition animate__animated animate__fadeIn">
-                    <strong class="text-xl text-blue-600">Drophunt SEED</strong>
-                    <p class="mt-2 text-gray-600">Ikut drophunt SEED untuk token gratis di Ethereum. <a href="https://t.me/seedapp" class="text-blue-500 hover:text-blue-600 hover:underline">Lihat Detail</a></p>
+                    <strong class="text-xl text-blue-600">Drophunt Gradient</strong>
+                    <p class="mt-2 text-gray-600">Ikut drophunt Gradient untuk poin tambahan di Solana. <a href="https://app.gradient.network" class="text-blue-500 hover:text-blue-600 hover:underline">Lihat Detail</a></p>
                     <p class="mt-2 text-sm text-gray-500">Berakhir: <span class="timer" data-end="2025-04-20T23:59:59">Loading...</span></p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition animate__animated animate__fadeIn animate__delay-2s">
-                    <strong class="text-xl text-blue-600">Drophunt Yescoin</strong>
-                    <p class="mt-2 text-gray-600">Dapatkan koin tambahan dengan invite di Base. <a href="https://t.me/yescoin" class="text-blue-500 hover:text-blue-600 hover:underline">Ikut Sekarang</a></p>
+                    <strong class="text-xl text-blue-600">Drophunt BlockMesh</strong>
+                    <p class="mt-2 text-gray-600">Dapatkan poin dengan share bandwidth di Solana. <a href="https://app.blockmesh.xyz" class="text-blue-500 hover:text-blue-600 hover:underline">Ikut Sekarang</a></p>
                     <p class="mt-2 text-sm text-gray-500">Berakhir: <span class="timer" data-end="2025-05-01T23:59:59">Loading...</span></p>
                 </div>
             </div>
@@ -127,6 +162,44 @@
                 <a href="https://t.me/sentineldiscus" class="text-gray-600 hover:text-blue-500 transition">
                     <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A11.952 11.952 0 0 0 0 11.944 11.952 11.952 0 0 0 11.944 23.928c6.628 0 12-5.371 12-12 0-6.628-5.371-12-12-12zM10.615 17.125l-3.999-3.75c-.167-.156-.267-.375-.267-.625s.1-.469.267-.625l1.25-1.188c.167-.156.375-.25.625-.25s.458.094.625.25l1.875 1.75 6.025-6c.167-.156.375-.25.625-.25s.458.094.625.25l1.25 1.188c.167.156.267.375.267.625s-.1.469-.267.625l-9.625 9c-.167.156-.375.25-.625.25s-.458-.094-.625-.25z"/></svg>
                 </a>
+            </div>
+        </section>
+
+        <!-- Dashboard Akun -->
+        <section id="dashboard" class="mt-12 hidden">
+            <h2 class="text-3xl font-bold mb-6 border-b-2 border-blue-400 pb-2">Dashboard Akun</h2>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <p class="text-gray-600">Selamat Datang, <span id="user-name">[Nama Pengguna]</span>! <a href="#" id="edit-profile" class="text-blue-500 hover:text-blue-600">Edit Profil</a></p>
+                <p class="mt-2 text-gray-600">Airdrop Favorit: <span id="favorite-airdrops">Gradient, BlockMesh, Functor</span></p>
+                <button id="save-profile" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition hidden">Simpan Profil</button>
+            </div>
+        </section>
+
+        <!-- Notifikasi Airdrop -->
+        <section id="notifications" class="mt-12 hidden">
+            <h2 class="text-3xl font-bold mb-6 border-b-2 border-blue-400 pb-2">Notifikasi Airdrop</h2>
+            <div id="notification-list" class="bg-white p-6 rounded-lg shadow-lg">
+                <ul class="list-disc pl-5 text-gray-600">
+                    <li>Airdrop Gradient berakhir dalam 15 hari.</li>
+                    <li>BlockMesh membuka drophunt baru besok!</li>
+                    <li>Functor membutuhkan tugas tambahan untuk bonus.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Pengaturan -->
+        <section id="settings" class="mt-12 hidden">
+            <h2 class="text-3xl font-bold mb-6 border-b-2 border-blue-400 pb-2">Pengaturan</h2>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <label class="flex items-center space-x-2 mb-4">
+                    <input type="checkbox" id="dark-mode" class="form-checkbox">
+                    <span class="text-gray-600">Mode Gelap</span>
+                </label>
+                <select id="language-select" class="p-3 rounded-lg text-gray-800 border border-gray-300 mb-4">
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="en">English</option>
+                </select>
+                <button id="reset-settings" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition">Reset Pengaturan</button>
             </div>
         </section>
     </div>
